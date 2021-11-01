@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  background-image: url("../media/img/testBcImg.jpg");
+  background-repeat: no-repeat;
+  height: 100em;
+  font-family: 'Open Sans';
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #00000094;
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+  position: fixed;
+  min-height: 3vmax;
+  width: 100vw;
+}
+
+nav .navLogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+nav .navLogo img {
+  width: 18%;
+  margin: 0em 0.5em;
+}
+
+nav .navLogo h3 {
+  font-size: 1em;
+  font-weight: 100;
+}
+
+nav .navLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 30%;
+}
+
+nav .navLinks li {
+  list-style: none;
+}
+
+nav .navLinks li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav .navLinks li a:hover {
+  color: #9ab6da;
+}
+
+nav .navLinks .loginBtn {
+  display: none;
+  background-color: #2E7DE4;
+  padding: 0.5em 2em;
+  border-radius: 5px;
+}
+
+nav .burger {
+  display: none;
+}
+
+nav .burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+}
+
+@media screen and (max-width: 1300px) {
+  .navLinks {
+    background-color: rebeccapurple;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navLinks {
+    position: absolute;
+    right: 0px;
+    height: 96vh;
+    height: 3vh;
+    background-color: rgba(255, 0, 0, 0.274);
+  }
+}
+/*# sourceMappingURL=styles.css.map */
