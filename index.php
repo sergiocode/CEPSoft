@@ -13,14 +13,14 @@
 <body>
     <nav>
         <div class="navLogo">
-            <img src="./media/img/logoCEP.png" alt="">
-            <h3>Centre d'Estudis<br/>Politècnics</h3>
+            <img src="./media/img/logoCEP.png" alt="" class="cepLogo">
+            <h3 class="cepTitle">Centre d'Estudis<br/>Politècnics</h3>
         </div>
         <ul class="navLinks">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Juegos</a></li>
-            <li><a href="#">Contacto</a></li>
-            <li><a href="#">ADMIN</a></li>
+            <li><a class="navLink" href="#">Inicio</a></li>
+            <li><a class="navLink" href="#">Juegos</a></li>
+            <li><a class="navLink" href="#">Contacto</a></li>
+            <li><a class="navLink" href="#">ADMIN</a></li>
             <li><a class="loginBtn" href="#" id="loginBtn">Inciar sesión</a></li>
         </ul>
         <div class="burger">
