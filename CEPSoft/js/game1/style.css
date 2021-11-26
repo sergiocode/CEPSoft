@@ -1,0 +1,109 @@
+body {
+  overflow: hidden;
+}
+
+.juegoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  top: 12vh;
+  min-height: 30em;
+}
+
+.containerDialogo {
+  background-color: #ffa300;
+  width: 1200px;
+  height: 8em;
+  -ms-flex-item-align: center;
+      align-self: center;
+  border: solid 5px #ffa300;
+  border-radius: 15px 15px 0px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.containerDialogo div {
+  margin: 0em 2em;
+  border-radius: 15px;
+}
+
+.imagenNarrador {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 16%;
+  height: 90%;
+  background-color: white;
+}
+
+.imagenNarrador img {
+  height: 7em;
+}
+
+.textoNarrador {
+  width: 90%;
+  height: 90%;
+  background-color: white;
+}
+
+.outputTexto {
+  width: 70%;
+  color: black;
+  font-size: larger;
+}
+
+.juego {
+  position: relative;
+  border: solid 5px #ffa300;
+  background-color: black;
+  width: 1200px;
+  height: 650px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border-radius: 0px 0px 15px 15px;
+}
+
+#character {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 30px;
+  height: 40px;
+  border: 1px solid;
+  border-color: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  top: 20px;
+  left: 20px;
+}
+
+.collision {
+  margin: 0;
+  width: 1130px;
+  height: 60px;
+  background-color: red;
+  position: absolute;
+  top: 0px;
+  left: 70px;
+}
+/*# sourceMappingURL=style.css.map */
