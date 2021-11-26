@@ -1,0 +1,177 @@
+body {
+  background-image: radial-gradient(ellipse at bottom, #2b3a4b 0%, #070b1b);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h1 {
+  color: white;
+  margin: 0;
+  font-size: 5em;
+  padding: 0em 0.6em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+h2 {
+  color: white;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+p {
+  color: white;
+  padding: 0em 2em;
+}
+
+hr {
+  width: 20vw;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.containerJuegos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  top: 8em;
+  min-height: 30em;
+}
+
+.containerJuegos p {
+  text-align: justify;
+}
+
+.loginBtn {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 2em;
+  margin-top: 0;
+  width: 5.7em;
+}
+
+.coleccionJuegos {
+  min-height: 30em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.miniaturaJuego {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  height: 15em;
+  margin: 1em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.accederJuegoBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px;
+  height: 3em;
+  margin: 0;
+  background-color: #d38601;
+}
+
+.accederJuegoBtn:hover {
+  background-color: #a36700;
+}
+
+#juego1 {
+  background-color: #350000;
+}
+
+#juego2 {
+  background-color: #000042;
+}
+
+#juego3 {
+  background-color: #004900;
+}
+
+#juego4 {
+  background-color: #332100;
+}
+
+@media screen and (min-width: 425px) {
+  .miniaturaJuego {
+    width: 70%;
+    height: 15em;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .miniaturaJuego {
+    width: 40%;
+    height: 13em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .containerJuegos p {
+    padding: 0em 10em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .miniaturaJuego {
+    width: 45%;
+    height: 17em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .containerJuegos p {
+    padding: 0em 17em;
+  }
+  .coleccionJuegos {
+    padding: 0em 10em;
+  }
+  .miniaturaJuego {
+    width: 35%;
+    height: 15;
+  }
+}
+
+@media screen and (min-width: 2560) {
+  .miniaturaJuego {
+    width: 32%;
+    height: 25em;
+  }
+}
+/*# sourceMappingURL=juegos.css.map */
