@@ -1,0 +1,92 @@
+body {
+    overflow: hidden;
+}
+
+//// Estilos de la pantalla y diálogos ////
+
+.juegoContainer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 12vh;
+    min-height: 30em;
+}
+
+.containerDialogo {
+    background-color: #ffa300;
+    width: 1200px;
+    height: 8em;
+    align-self: center;
+    border: solid 5px #ffa300;
+    border-radius: 15px 15px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.containerDialogo div {
+    margin: 0em 2em;
+    border-radius: 15px;
+}
+
+.imagenNarrador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16%;
+    height: 90%;
+    background-color: white;
+}
+
+.imagenNarrador img {
+    height: 7em;
+}
+
+.textoNarrador {
+    width: 90%;
+    height: 90%;
+    background-color: white;
+}
+
+.outputTexto {
+    width: 70%;
+    color: black;
+    font-size: larger;
+}
+
+//// Estilos del juego ////
+
+.juego {
+    position: relative;
+    border:solid 5px #ffa300;
+    background-color: black;
+    // Dimensiones del mapa
+        width: 1200px;
+        height: 650px;
+    align-self: center;
+    border-radius: 0px 0px 15px 15px;
+}
+
+#character {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 30px;
+    height: 40px;
+    border: 1px solid;
+    // border-color: white;
+    transition: 0.3s;
+    top: 20px;
+    left: 20px;
+}
+
+
+.collision {
+    margin: 0;
+    width: 1130px;
+    height: 60px;
+    background-color: red;
+    position: absolute;
+    top: 0px;
+    left: 70px;
+}
