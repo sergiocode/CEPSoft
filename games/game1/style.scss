@@ -54,15 +54,25 @@ body {
     font-size: larger;
 }
 
+
 //// Estilos del juego ////
 
+$screenWidth: 1200px;   //1200
+$screenHeight: 650px;   //650
+
+@function inicioCoche($screenWidth) {
+    @return $screenWidth + 20;
+}
+
 .juego {
-    position: relative;
+    position: absolute;
+    top: 8em;
     border:solid 5px #ffa300;
-    background-color: black;
+    // background-color: black;
+    background-image: url("./media/img/mapaFrase.png");
     // Dimensiones del mapa
-        width: 1200px;
-        height: 650px;
+        width: $screenWidth;
+        height: $screenHeight;
     align-self: center;
     border-radius: 0px 0px 15px 15px;
 }
@@ -73,13 +83,56 @@ body {
     position: relative;
     width: 30px;
     height: 40px;
-    border: 1px solid;
+    // border: 1px solid;
     // border-color: white;
     transition: 0.3s;
-    top: 20px;
-    left: 20px;
+    top: 80px;
+    left: 40px;
 }
 
+.coche {
+    background-image: url("./media/img/coche.gif");
+    width: 50px;
+    height: 20px;
+    position: relative;
+    top: 40%;
+    // left: inicioCoche($screenWidth);
+    // background-color: blue;
+    
+    transition: 0.3s;
+}
+
+// Gemas //
+
+.gema {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+}
+
+#gemaF {
+    background-image: url("./media/img/gemaF.gif");
+    background-color: red;
+
+    top: 425px;
+    left: 240px;
+}
+#gemaR {
+    background-image: url("./media/img/gemaR.gif");
+    background-color: yellow;
+}
+#gemaA {
+    background-image: url("./media/img/gemaA.gif");
+    background-color: purple;
+}
+#gemaS {
+    background-image: url("./media/img/gemaS.gif");
+    background-color: green;
+}
+#gemaE {
+    background-image: url("./media/img/gemaE.gif");
+    background-color: aqua;
+}
 
 .collision {
     margin: 0;
