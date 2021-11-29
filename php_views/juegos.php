@@ -25,16 +25,16 @@
 
         <div class="coleccionJuegos">
             <div class="miniaturaJuego" id="juego1">
-                <a href="./game1.php" class="accederJuegoBtn"> Jugar a FRASE!</a>
+                <a href="../games/game1/game1.php" class="accederJuegoBtn"> Jugar a FRASE!</a>
             </div>
             <div class="miniaturaJuego" id="juego2">
-                <a href="./game2.php" class="accederJuegoBtn"></a>
+                <a href="" class="accederJuegoBtn"></a>
             </div>
             <div class="miniaturaJuego" id="juego3">
-                <a href="./game3.php" class="accederJuegoBtn"></a>
+                <a href="" class="accederJuegoBtn"></a>
             </div>
             <div class="miniaturaJuego" id="juego4">
-                <a href="./game4.php" class="accederJuegoBtn"></a>
+                <a href="" class="accederJuegoBtn"></a>
             </div>
         </div>
 

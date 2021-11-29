@@ -72,9 +72,10 @@ body {
 }
 
 .juego {
-  position: relative;
+  position: absolute;
+  top: 8em;
   border: solid 5px #ffa300;
-  background-color: black;
+  background-image: url("./media/img/mapaFrase.png");
   width: 1200px;
   height: 650px;
   -ms-flex-item-align: center;
@@ -89,11 +90,53 @@ body {
   position: relative;
   width: 30px;
   height: 40px;
-  border: 1px solid;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  top: 20px;
-  left: 20px;
+  top: 80px;
+  left: 40px;
+}
+
+.coche {
+  background-image: url("./media/img/coche.gif");
+  width: 50px;
+  height: 20px;
+  position: relative;
+  top: 40%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.gema {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+}
+
+#gemaF {
+  background-image: url("./media/img/gemaF.gif");
+  background-color: red;
+  top: 425px;
+  left: 240px;
+}
+
+#gemaR {
+  background-image: url("./media/img/gemaR.gif");
+  background-color: yellow;
+}
+
+#gemaA {
+  background-image: url("./media/img/gemaA.gif");
+  background-color: purple;
+}
+
+#gemaS {
+  background-image: url("./media/img/gemaS.gif");
+  background-color: green;
+}
+
+#gemaE {
+  background-image: url("./media/img/gemaE.gif");
+  background-color: aqua;
 }
 
 .collision {
