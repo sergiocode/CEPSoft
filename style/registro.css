@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  background-image: radial-gradient(ellipse at bottom, #2b3a4b 0%, #070b1b);
+}
+
+.contenidoRegistro {
+  margin: 10em 0em;
+}
+
+.error {
+  background-color: #ff9185;
+  font-size: 12px;
+  padding: 10px;
+  border-radius: 10%;
+  /* border-top-width: 7px; */
+  /* border-color: red; */
+  border-color: #f12c2c;
+  border-width: 3px;
+  border-style: dotted;
+}
+.correcto {
+  background-color: #a0dea7;
+  font-size: 12px;
+  padding: 10px;
+  border-radius: 10%;
+  border-color: #117e03;
+  border-width: 3px;
+  border-style: dotted;
+}
+.ventada_form {
+  width: 450px;
+  min-height: 500px;
+  height: auto;
+  border-radius: 5px;
+  margin: 2% auto;
+  margin-top: 6%;
+  box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+  padding: 2%;
+  background-image: linear-gradient(
+    -225deg, #e8e8e8 70%, #2f7ce4 30%);
+}
+
+
+.inputs_class {
+  width: 70%;
+  min-width: 250px;
+  padding: 0.25em 0.6em;
+  border-radius: 0.3rem;
+  border: 1px solid #ffffff;
+  text-align: center;
+  box-shadow: 0 2px 3px rgb(0 0 0 / 0.15);
+  
+}
+.select_class {
+  width: 70%;
+  min-width: 250px;
+  padding: 0.25em 0.6em;
+  border-radius: 0.3rem;
+  border: 1px solid #ffffff;
+  text-align: center;
+  box-shadow: 0 2px 3px rgb(0 0 0 / 0.15);
+  
+}
+
+/*stilos para el formulario*/
+
+.inputs_class::placeholder{
+  /*sine sto no ves los iconos*/
+  font-family: "Open Sans"; font-weight: bold; content: "\f007";
+}
+input{
+  /*sine sto no ves los iconos*/
+  font-family: "Open Sans"; font-weight: bold; content: "\f007";
+}
+
+
+  /*lineas al seleccionar elementos*/
+.inputs_class:focus{
+  outline: none;
+}
+.select_class:focus{
+  outline: none;
+}
+
+header {
+  margin: 2% auto 10% auto;
+  text-align: center;
+}
+
+header h2 {
+  font-size: 250%;
+  font-family: "Open Sans", serif;
+  color: #3e403f;
+  margin-right: 200px;
+}
+
+header p {
+  letter-spacing: 0.05em;
+  margin-right: 200px;
+}
+
+.input-item {
+  background: #fff;
+  color: #333;
+  padding: 14px 3px 15px 9px;
+  border-radius: 5px 0px 0px 5px;
+}
+/* ////////////////FAFA ICONS///////////////////// */
+/* //////////////////////////////////////////// */
+.fa-share:before {
+  margin-left: -7px;
+}
+
+.fa-reply:before {
+  margin-left: -9px;
+}
+/* //////////////////////////////////////////// */
+/* //////////////////////////////////////////// */
+
+/* Show/hide password Font Icon */
+#ojo {
+  background: #fff;
+  color: #333;
+
+  margin: 5.9px 0 0 0;
+  margin-left: -20px;
+  padding: 15px 9px 19px 0px;
+  border-radius: 0px 5px 5px 0px;
+
+  /*float: right;*/
+  position: relative;
+  right: 1%;
+  top: -0.2%;
+  z-index: 5;
+
+  cursor: pointer;
+}
+
+/* inputs form  */
+input[class="form-input"] {
+  width: 240px;
+  height: 50px;
+
+  margin-top: 2%;
+  padding: 15px;
+
+  font-size: 16px;
+  font-family: "Abel", sans-serif;
+  color: #5e6472;
+
+  outline: none;
+  border: none;
+
+  border-radius: 0px 5px 5px 0px;
+  transition: 0.2s linear;
+}
+
+/* focus  */
+input:focus {
+  transform: translateX(-2px);
+  border-radius: 5px;
+}
+
+/* ////////////////FAFA ICONS///////////////////// */
+/* //////////////////////////////////////////// */
+
+/* //////////////////////////////////////////// */
+/* //////////////////////////////////////////// */
+
+input[type="text"] {
+  min-width: 250px;
+}
+/* buttons  */
+button {
+  display: inline-block;
+  color: #252537;
+
+  width: 280px;
+  height: 50px;
+
+  padding: 0 20px;
+  background: #fff;
+  border-radius: 5px;
+
+  outline: none;
+  border: none;
+
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s linear;
+
+  margin: 7% auto;
+  letter-spacing: 0.05em;
+  font-family: "Open Sans"; font-weight: 300; content: "\f007";
+}
+/* Submits */
+
+
+.frgt-pass {
+  background: transparent;
+}
+
+.sign-up {
+  background: #1c9200;
+  color: white;
+}
+.sign-down {
+  background: #ff6b6b;
+  margin-top: -3%
+}
+
+button:hover {
+  transform: translatey(3px);
+  box-shadow: none;
+  
+}
+
+/*animacion raton encima botones*/
+button:hover {
+  animation: ani9 0.4s ease-in-out infinite alternate;
+}
+@keyframes ani9 {
+  0% {
+    transform: translateY(3px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+
+body {
+  text-align: center;
+}
+
+#boton_1 {
+  float: left;
+  right: 60%;
+  width: 3%;
+  border-radius: 30%;
+}
+#boton_2 {
+  float: right;
+  width: 4%;
+  left: 60%;
+  border-radius: 30%;
+}
+.img_avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 5%;
+}

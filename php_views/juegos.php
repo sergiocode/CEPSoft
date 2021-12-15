@@ -1,3 +1,9 @@
+<!-- <?php
+  session_start();
+  include('../controlers/bd.php');
+
+?> -->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -14,28 +20,109 @@
 </head>
 <body>
     <?php
-        include("../php_partials/navBar.html");
+        include("../php_partials/navBar.php");
     ?>
     <div class="containerJuegos">
         <h1>Juegos</h1>
         <hr>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id ligula vitae sem faucibus iaculis. Cras ligula ex, gravida quis consequat pharetra, ornare eu tellus. Fusce venenatis ex et elit porta semper vel sit amet sapien. Pellentesque magna erat, ultrices in mauris et, pharetra sodales odio. In a vehicula libero. Vivamus commodo elit diam, a euismod dui dignissim eget. Fusce a venenatis odio, id posuere ipsum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur sed fringilla massa, vel rutrum lacus. Aenean dictum ligula blandit imperdiet malesuada.</p>
-        <h2>Inicia sesión para jugar</h2>
-        <a class="loginBtn" href="#" id="loginBtn">Inciar sesión</a>
-
+        <p class="presentacionJuegos">Desde Centre d'Estudis Politècnics volem mostrar el centre des d'un punt de vista interactiu. Oferim 4 jocs que reflecteixen la manera que tenim d'ensenyar i sobretot d'aprendre junts, a més dels mòduls i perfils professionals.</p>
+        <?php
+          if(!isset($_SESSION['user_id'])){
+            echo  '<h2>Inicia sessió per jugar</h2>';
+            echo '<a class="loginBtn" href="./login.php" id="loginBtn">Inciar sessió</a>';
+          }
+        ?>
+        
         <div class="coleccionJuegos">
-            <div class="miniaturaJuego" id="juego1">
-                <a href="../games/game1/game1.php" class="accederJuegoBtn"> Jugar a FRASE!</a>
-            </div>
-            <div class="miniaturaJuego" id="juego2">
-                <a href="" class="accederJuegoBtn"></a>
-            </div>
-            <div class="miniaturaJuego" id="juego3">
-                <a href="" class="accederJuegoBtn"></a>
-            </div>
-            <div class="miniaturaJuego" id="juego4">
-                <a href="" class="accederJuegoBtn"></a>
-            </div>
+
+
+
+        <!---------------------------------------------------------------------------------juegos-->
+        <?php
+        //juego1 siempre activo 
+        if(isset($_SESSION['user_id'])){
+            echo  '<div class="miniaturaJuego" id="juego1">';
+            echo '<a href="../games/game1/game1.php" class="accederJuegoBtn">Jugar Frase</a> </div>';
+        }
+        else{
+            echo  '<div class="miniaturaJuego" id="juego1">';
+            echo '<a class="accederJuegoBtn">BLOKEADO</a> </div>';
+        }
+
+        //sacaremos el select de el juego 1 
+        if(isset($_SESSION['user_id'])){//si tiene sesion
+         $username = $_SESSION['user_id'];
+         $query = $connection->prepare("SELECT ID_Juego FROM juega WHERE NickName= :username and ID_Juego=1");
+         $query->bindParam(':username', $username, PDO::PARAM_STR);
+         $query->execute();
+      
+         $result = $query->fetch(PDO::FETCH_ASSOC);
+      
+      if(!$result){//SI ESTA VACIO
+        echo  '<div class="miniaturaJuego" id="juego2">';
+        echo '<a class="accederJuegoBtn">Pasa anterior</a> </div>';
+       
+      } else{//SI PUEDE ENTRAR
+        echo  '<div class="miniaturaJuego" id="juego2">';
+        echo '<a href="../games/game2/game2.php" class="accederJuegoBtn"> Salidas Profesionales!</a> </div>';
+          
+      }
+      }else{//si la sesion no esta inicada
+        echo  '<div class="miniaturaJuego" id="juego2">';
+        echo '<a href="login.php" class="accederJuegoBtn"> BLOKEADO2</a> </div>';
+
+          }  
+    if(isset($_SESSION['user_id'])){//si tiene sesion
+            $username = $_SESSION['user_id'];
+            $query = $connection->prepare("SELECT ID_Juego FROM juega WHERE NickName= :username and ID_Juego=2");
+            $query->bindParam(':username', $username, PDO::PARAM_STR);
+            $query->execute();
+         
+            $result2 = $query->fetch(PDO::FETCH_ASSOC);
+         
+         if(!$result2){//SI ESTA VACIO
+           echo  '<div class="miniaturaJuego" id="juego3">';
+           echo '<a  class="accederJuegoBtn">Pasa anterior</a> </div>';
+          
+         } else{//SI PUEDE ENTRAR
+           echo  '<div class="miniaturaJuego" id="juego3">';
+           echo '<a href="../games/game3/game3.php" class="accederJuegoBtn">Modulos</a> </div>';
+             
+         }
+         }else{//si la sesion no esta inicada
+           echo  '<div class="miniaturaJuego" id="juego3">';
+           echo '<a href="login.php" class="accederJuegoBtn"> BLOKEADO</a> </div>';
+   
+             }
+
+             if(isset($_SESSION['user_id'])){//si tiene sesion
+                $username = $_SESSION['user_id'];
+               $query = $connection->prepare("SELECT ID_Juego FROM juega WHERE NickName= :username and ID_Juego=3");
+                $query->bindParam(':username', $username, PDO::PARAM_STR);
+                $query->execute();
+             
+                $result3 = $query->fetch(PDO::FETCH_ASSOC);
+             
+             if(!$result3){//SI ESTA VACIO
+               echo  '<div class="miniaturaJuego" id="juego4">';
+               echo '<a  class="accederJuegoBtn">Pasa anterior</a> </div>';
+              
+             } else{//SI PUEDE ENTRAR
+               echo  '<div class="miniaturaJuego" id="juego4">';
+               echo '<a href="../games/game4/game4.php" class="accederJuegoBtn">Modulos</a> </div>';
+                 
+             }
+             }else{//si la sesion no esta inicada
+               echo  '<div class="miniaturaJuego" id="juego4">';
+               echo '<a href="login.php" class="accederJuegoBtn"> BLOKEADO2</a> </div>';
+       
+                 }
+
+       ?>
+            
+          
+            
+            
         </div>
 
         <?php

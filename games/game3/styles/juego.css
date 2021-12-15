@@ -1,0 +1,131 @@
+body {
+    background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url("../imagenesCesta/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+
+
+#fondoJuego {
+    /* background-color: #aaaaaa; */
+    background-image: url("../img/pizarra.jpg");
+    width: 800px;
+    height: 500px;
+    background-size: 100% 100%;
+    margin-top: 5%;
+    position: relative;
+    top: 75px;
+}
+
+#estudiante {
+    background-image: url("../img/estudiante.png");
+    background-size: cover;
+    width: 70px;
+    height: 70px;
+    /* background-color: hotpink; */
+    position: absolute;
+    top: 430px;
+    left: 320px;
+
+}
+
+.clase {
+    width: 50px;
+    height: 50px;
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+#clase1 {
+    background-image: url("../img/php.png");
+    /* background-size: cover; */
+    /* background-color: red; */
+    top: 0px;
+    left: 40px;
+    display: none;
+}
+
+#clase2 {
+    background-image: url("../img/javascript.png");
+    /* background-size: cover; */
+    /* background-color: black; */
+    left: 320px;
+    top: 0px;
+    display: none;
+}
+
+#clase3 {
+    background-image: url("../img/html.png");
+    /* background-size: cover;   */
+    /* background-color: green; */
+    left: 700px;
+    top: 0px;
+    display: none;
+}
+
+
+
+#contador {
+    left: 700px;
+    background-color: gold;
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    top: 0px;
+    color: black;
+    text-align: center;
+    border-color: goldenrod !important;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* border-color: rgb(218, 32, 119) !important; */
+}
+
+#puntuacion {
+
+    left: 0;
+    background-color: gold;
+    width: 100px;
+    height: 50px;
+    top: 0px;
+    position: absolute;
+    color: black;
+    text-align: center;
+    border-color: goldenrod !important;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* border-color: rgb(32, 91, 218) !important; */
+}
+
+#footer {
+
+    height: 150px;
+}
+
+#empezar {
+
+    left: 310px;
+    position: absolute;
+    width: 200px;
+    height: 80px;
+    font-size: 50px;
+    top: 210px;
+    color: black;
+    background-position: center;
+    background-color: wheat;
+}
+
+
+#siguiente {
+    background-image: url("../imagenesCesta/Flechajuego.png");
+    background-size: 100% 100%;
+    background-position: center;
+    border-color: goldenrod !important;
+    position: absolute;
+    left: 310px;
+    height: 100px;
+    width: 100px;
+    top: 210px;
+    border-radius: 30px 30px;
+}

@@ -14,7 +14,7 @@
 </head>
 <body>
     <?php
-        include("../CEPSoft/php_partials/navBar.html");
+        include("../CEPSoft/php_partials/navBar.php");
     ?>
 
     <!-- Image slider Inicio -->
@@ -22,7 +22,7 @@
         <!-- Info del slider -->
         <div class="infoSlider">
             <h1>Centre d'Estudis Politècnics</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consectetur in dui in pulvinar. In eget sodales urna, vitae vehicula velit. Maecenas ut suscipit dolor. Suspendisse convallis dapibus egestas. Nam semper tellus lectus, et feugiat justo luctus quis. Sed mattis dui vitae risus dignissim, at fermentum ex sollicitudin. Maecenas rhoncus.</p>
+            <p>Especialistes en cicles formatius i metodologies actives. Descobreix una nova forma d'aprendre</p>
         </div>
         <div class="slides">
             <input type="radio" name="radio-btn" id="radio1">
@@ -46,15 +46,6 @@
             <div class="slide">
                 <img src="./media/img/imageSlider/slider4.jpeg" class="slideImg" alt="">
             </div>
-
-            <!-- Indica la posición del slider pero se tiene que mejorar el CSS -->
-            <!-- <div class="navigation-auto">
-                <div class="auto-btn1"></div>
-                <div class="auto-btn2"></div>
-                <div class="auto-btn3"></div>
-                <div class="auto-btn4"></div>
-                <div class="auto-btn5"></div>
-            </div> -->
         </div>
 
         <div class="navigation-manual">
@@ -68,25 +59,19 @@
     
 
     <div class="inicioContainer">
-        <div class="inicioApartados">
             <div class="centreContainer">
                 <h3 class="titulosInicio">El centre</h3>
-                <p class="centreText">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis ultricies turpis nec porta. Donec ultricies placerat velit in viverra. Morbi consectetur diam non felis vehicula, nec posuere mauris scelerisque. Fusce sit amet aliquam justo, id ultrices dui. Sed eros est, vulputate sed pellentesque sit amet, accumsan et velit. Aliquam eget velit efficitur lectus euismod malesuada. Sed eget tempus augue, vitae condimentum nisi.
-
-                    Suspendisse ex nisi, condimentum a ultrices eu, facilisis nec est. Sed nisi lectus, fringilla id tempor tincidunt, mattis dignissim sapien. Suspendisse non odio pulvinar, consectetur libero non, blandit felis. Pellentesque posuere finibus neque in molestie. Sed libero est, aliquet at nulla non, consectetur vestibulum lectus. Pellentesque id eros tellus. In urna lacus, volutpat et libero non, molestie facilisis orci. Morbi id porta velit. Nullam tellus ipsum, rhoncus vel mi ac, eleifend sodales mauris. Donec consequat pulvinar quam, sit amet posuere urna posuere sed. Nulla dictum accumsan dictum. Ut ut nisi rhoncus, ullamcorper leo id, varius nisl.
-
-                    Proin mattis a lorem at porttitor. Integer ultricies turpis augue, id convallis dolor ornare et. Integer ac tristique odio, non commodo arcu. Suspendisse potenti. Aenean a dolor justo. Morbi aliquam dolor ut metus lobortis pharetra. Suspendisse sit amet porta nibh. Quisque condimentum interdum interdum. Nullam pulvinar nulla lorem, non gravida enim accumsan efficitur. Morbi in vestibulum velit. Nunc gravida lectus a sem dapibus rhoncus. Donec scelerisque faucibus lacus a accumsan.
-                </p>
+                <p class="pText">Al Centre d’Estudis Politècnics disposem d’un equip professional i humà que vetlla en tot moment per satisfer l’experiència acadèmica del nostre alumnat. En tractar-se d’una formació presencial, li proposem que visqui una experiència d’aprenentatge amb els cinc sentits. A l’aula podem veure’ns, escoltar-nos, compartir, discutir i emocionar-nos. L’assistència a classe ens permet aprofitar millor l’experiència d’aprenentatge, d’una manera molt més enriquidora. Ens tenim a totes i tots per explicar, per preguntar, per dubtar, per equivocar-nos i per descobrir.</p>
+                <p class="pText">Per a la Direcció del centre, la qualitat del nostre equip docent i administratiu sempre ha estat un dels principals elements de valor diferencial. Per això, el Politècnics té un equip professional i humà especialitzat, amb experiència professional en els diversos sectors dels cicles formatius que s’hi imparteixen. És fonamental un equip que conegui i combini les realitats de l’aula i de l’empresa per poder acompanyar el nostre alumnat en el seu procés d’aprenentatge, de creixement personal i d’inserció en el mercat laboral.</p>
             </div>
 
-            <!-- <hr class="separadorHr"> -->
+            <hr class="separadorHr">
 
-            <!-- <div class="formacionesContainer">
+            <div class="formacionesContainer">
                 <h3 class="titulosInicio"> Formacions</h3>
 
                 <div class="formacionCards">
-                    <div class="formacionCard" id="formacion1">
+                    <div class="formacionCard" id="formacion1" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
                         <div class="formacionCardHeader">
                             <h4>Informàtica i comunicacions</h4>
                             <img src="./media/img/formaciones/informaticaLogo.png" alt="">
@@ -144,11 +129,79 @@
             
             <div class="equipoContainer">
                 <h3 class="titulosInicio">L'equip</h3>
-            </div> -->
-        </div>
+
+                <p class="pText" id="texto4skills">4Skills es un grup de 4 desenvolupadors web que en aquesta ocasió ha col·laborat amb el Centre d'Estudis Politècnics per treballar en millorar l'experiència de l'usuari de cara a les portes obertes del centre.</p>
+
+                <div class="cardsGroup">
+                    <div class="flip-card">
+                        <div class="card-inner" id="card1">
+                            <div class="card-front">
+                                <div class="bitmojiCard" id="bitmojiSergio"></div>
+                            </div>
+                            <div class="card-back">
+                                <h6>Sergio Moyano</h6>
+                                <div class="socialMedia">
+                                    <a href="https://www.instagram.com/thesergiomoyano/"><img class="logoScoialMedia" src="./media/img/instagram.png" alt=""></a>
+                                    <a href="https://github.com/sergiocode"><img class="logoScoialMedia" src="./media/img/github.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flip-card">
+                        <div class="card-inner" id="card1">
+                            <div class="card-front">
+                                <div class="bitmojiCard" id="bitmojiFran"></div>
+                            </div>
+                            <div class="card-back">
+                                <h6>Fran Gonzalez</h6>
+                                <div class="socialMedia">
+                                    <a href="https://www.instagram.com/frankgcivic/"><img class="logoScoialMedia" src="./media/img/instagram.png" alt=""></a>
+                                    <a href="https://github.com/Frankcep"><img class="logoScoialMedia" src="./media/img/github.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flip-card">
+                        <div class="card-inner" id="card1">
+                            <div class="card-front">
+                                <div class="bitmojiCard" id="bitmojiJohnny"></div>
+                            </div>
+                            <div class="card-back">
+                                <h6>Johnny Bermudez</h6>
+                                <div class="socialMedia">
+                                    <a href="https://github.com/johnnydaw2a"><img class="logoScoialMedia" src="./media/img/github.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flip-card">
+                        <div class="card-inner" id="card1">
+                            <div class="card-front">
+                                <div class="bitmojiCard" id="bitmojiMarc"></div>
+                            </div>
+                            <div class="card-back">
+                                <h6>Marc Martinez</h6>
+                                <div class="socialMedia">
+                                    <a href="https://www.instagram.com/squirledepre/"><img class="logoScoialMedia" src="./media/img/instagram.png" alt=""></a>
+                                    <a href="https://github.com/MarcMayneDev"><img class="logoScoialMedia" src="./media/img/github.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
     </div>
     
     <!-- INCLUDE FOOTER -->
-    
+    <?php
+            include("./php_partials/footer.html");
+    ?>
+
+    <script type="text/javascript" src="./node_modules/vanilla-tilt/src/vanilla-tilt.js"></script>
 </body>
 </html>

@@ -1,0 +1,41 @@
+{
+    "navbar": {
+        "home" : "Inicio",
+        "games" : "Juegos",
+        "contact" : "Contacto",
+        "admin" : "ADMIN",
+        "login" : "Iniciar Sesión"
+    },
+    "landing" : {
+        "title" : "Politècnics",
+        "pSlider" : "Especialistas en ciclos formativos y metodologias activas. Descubre una nueva forma de aprender",
+        "titleHome" : "El centro",
+        "texto1" : "En el Politècnics disponemos de un equipo profesional y humano que vela en todo momento por satisfacer la experiencia académica de nuestro alumnado. Al tratarse de una formación presencial, le proponemos que viva una experiencia de aprendizaje con los cinco sentidos. En clase podemos vernos, escucharnos, compartir, discutir y emocionarnos. La asistencia a clase nos permite aprovechar mejor la experiencia de aprendizaje, de una manera mucho más enriquecedora. Nos tenemos a todas y todos para explicar, para preguntar, para dudar, para equivocarnos y para descubrir.",
+        "texto2" : "Para la Dirección del centro, la calidad de nuestro equipo docente y administrativo siempre ha sido uno de los principales elementos de valor diferencial. Por eso, el Politècnics tiene un equipo profesional y humano especializado, con experiencia profesional en varios sectores de los ciclos formativos que se imparten. Es fundamental un equipo que conozca y combine las realidades del aula y de la empresa para poder acompañar a nuestro alumnado en su proceso de aprendizaje, de crecimiento personal y de inserción en el mercado laboral.",
+        "titleFormacion" : "Formaciones",
+        "h4Informatica" : "Informática y Comunicaciones",
+        "grado1Informatica" : "Grado medio sistemas microinformáticos y redes",
+        "grado2Informatica" : "Grado superior desarrollo aplicaciones web",
+        "grado3Informatica" : "Grado superior desarrollo aplicaciones multiplataforma",
+        "h4Administracio" : "Administración y gestión",
+        "grado1Administracio" : "Grado medio gestión administrativa",
+        "grado2Administracio" : "Grado superior administración y finanzas",
+        "grado3Administracio" : "Grado superior asistencia a la dirección",
+        "h4Comercio" : "Comercio y Marketing",
+        "grado1Comercio" : "Grado medio actividades comerciales",
+        "grado2Comercio" : "Grado superior marketing y publicidad",
+        "grado3Comercio" : "Grado superior gestión de ventas y espacios comerciales",
+        "grado4Comercio" : "Grado superior comercio internacional",
+        "h4Hoteleria" : "Hoteleria y Turismo",
+        "grado1Hoteleria" : "Grado superior agencias de viajes y gestión de eventos",
+        "teamTitle" : "El Equipo",
+        "teamText" : "4Skills es un grupo de 4 desarrolladores web que en esta ocasión ha colaborado con el Politècnics para trabajar en mejorar la experiencia del usuario de cara a las puertas abiertas del centro."
+    },
+    "games" : {
+        "title" : "Juegos",
+        "h1Juegos" : "Juegos",
+        "pJuegos" : "Desde el Politècnics queremos mostrar el centro desde un punto de vista interactivo. Ofrecemos 4 jugos que reflejan la manera que tenemos de enseñar y sobretodo de aprender juntos, ademas de los modulos y perfiles profesionales",
+        "h2Login": "Iniciar sesión para jugar",
+        "aLogin" : "Iniciar Sesión"
+    }
+}

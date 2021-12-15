@@ -1,0 +1,307 @@
+body {
+  max-width: 100vw;
+  background-image: url('../media/img/imageSlider/slider1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.containerLogin {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 10em;
+  height: 28em;
+  align-items: center;
+  border-radius: 20px;
+  margin: 0em 1em;
+  padding: 2em;
+  background-color: #00000085;
+  backdrop-filter: blur(10px);
+}
+
+h1 {
+  color: white;
+  font-size: xxx-large;
+}
+
+.textoLogin {
+  color: white;
+  text-align: justify;
+  width: 90%;
+  margin: 0em 2em;
+}
+
+.login_button {
+  color: white;
+  background-color: #2f7ce4;
+  margin-bottom: 91px;
+}
+
+.inputs_class {
+  width: 7%;
+  height: 36px;
+  min-width: 250px;
+  padding: 0.25em 0.6em;
+  border-radius: 0.3rem;
+  border: 1px solid #ffffff;
+  text-align: center;
+  box-shadow: 0 2px 3px rgb(0 0 0 / 0.15);
+  font-family: "Open Sans"; font-weight: 300; content: "\f007";
+}
+.inputs_class::placeholder{
+  /*sine sto no ves los iconos*/
+  font-family: "Open Sans"; font-weight: 300; content: "\f007";
+}
+.reg_botton {
+  background-color: white;
+  margin-top: -62px;
+  margin-bottom: 258px;
+}
+/*button {
+  background-color: #47a386;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 25px;
+}*/
+
+.modal-container {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.85);
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  pointer-events: none;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: opacity 0.3s ease;
+}
+.modal-container2 {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.85);
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  pointer-events: none;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: opacity 0.3s ease;
+}
+
+.show {
+  pointer-events: auto;
+  opacity: 1;
+  position: absolute;
+  top: -15em;
+  left: auto;
+  height: 110vh;
+}
+
+.modal {
+  text-align: center;
+}
+.modal2 {
+  background-color: #fff;
+  width: 600px;
+  max-width: 100%;
+  padding: 30px 50px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.modal h1 {
+  margin: 0;
+}
+
+.modal p {
+  opacity: 0.7;
+  font-size: 14px;
+  padding: 0em 13em;
+}
+
+.modal2 h1 {
+  margin: 0;
+}
+
+.modal2 p {
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+/*/////////////////////////////////////*/
+form {
+  width: 450px;
+  min-height: 500px;
+  height: auto;
+  border-radius: 5px;
+  margin: 2% auto;
+  margin-top: 25%;
+  box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+  padding: 2%;
+  background-image: linear-gradient(
+    -225deg, #e8e8e8 70%, #2f7ce4 30%);
+}
+/* form Container */
+form .con {
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+  margin: 0 auto;
+}
+
+/* the header form form */
+header {
+  margin: 2% auto 10% auto;
+  text-align: center;
+}
+/* Login title form form */
+header h2 {
+  font-size: 250%;
+  font-family: "Open Sans";
+  color: #3e403f;
+}
+/*  A welcome message or an explanation of the login form */
+header p {
+  letter-spacing: 0.05em;
+}
+
+/* //////////////////////////////////////////// */
+/* ///////////////LOGIN//////////////////// */
+/* //////////////////////////////////////////// */
+
+.input-item {
+  background: #fff;
+  color: #333;
+  padding: 13px 0px 15px 9px;
+  border-radius: 5px 0px 0px 5px;
+}
+
+/* Show/hide password Font Icon */
+#ojete {
+  background: #fff;
+  color: #333;
+
+  margin: 5.9px 0 0 0;
+  margin-left: -20px;
+  padding: 15px 9px 19px 0px;
+  border-radius: 0px 5px 5px 0px;
+
+  float: right;
+  position: relative;
+  right: 1%;
+  top: -0.2%;
+  z-index: 5;
+
+  cursor: pointer;
+}
+
+/* focus  */
+input:focus {
+  transform: translateX(-2px);
+  border-radius: 5px;
+}
+
+/* //////////////////////////////////////////// */
+/* //////////////////////////////////////////// */
+
+/* input[type="text"] {min-width: 250px;} */
+/* buttons  */
+button {
+  display: inline-block;
+  color: #252537;
+
+  width: 280px;
+  min-height: 3em;
+
+  padding: 0 20px;
+  background: #fff;
+  border-radius: 5px;
+
+  outline: none;
+  border: none;
+
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s linear;
+
+  margin: 7% auto;
+  letter-spacing: 0.05em;
+}
+/* Submits */
+.submits {
+  width: 48%;
+  display: inline-block;
+  float: left;
+  margin-left: 2%;
+}
+
+/*       Forgot Password button FAF3DD  */
+.frgt-pass {
+  background: #eb8e8e;
+}
+
+/*     Sign Up button  */
+.sign-up {
+  background: #b8f2e6;
+  font-family: "Font Awesome 5 Free"; font-weight: 300; content: "\f007";
+}
+
+/* buttons hover */
+button:hover {
+  transform: translatey(3px);
+  box-shadow: none;
+}
+
+/* buttons hover Animation */
+button:hover {
+  animation: ani9 0.4s ease-in-out infinite alternate;
+}
+@keyframes ani9 {
+  0% {
+    transform: translateY(3px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+
+#close {
+  height: 50px;
+  background: #d32929;
+  color: WHITE;
+  width: 30%;
+}
+
+@media screen and (min-width: 768px) {
+  .containerLogin {
+    margin: 0em 5em;
+  }
+}
+
+@media screen and (min-width: 1042px) {
+  .containerLogin {
+    margin: 0em 10em;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .containerLogin {
+    margin: 0em 20em;
+  }
+}
+

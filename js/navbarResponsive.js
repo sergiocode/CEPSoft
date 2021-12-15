@@ -20,7 +20,6 @@ navSlide();
 
 window.addEventListener('scroll', function(){
     if(window.pageYOffset > 500){
-        console.log('Hola');
         navBar.style.backgroundColor = "white";
         navLinkDesktop.forEach(element => {
             element.style.color = "black";

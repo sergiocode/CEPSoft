@@ -1,10 +1,14 @@
+@font-face {
+    font-family: 'Retro';
+    src: url(/CEPSoft/fonts/04b_30/04B_30__.ttf);
+}
+
 //////// GENERAL STYLES ////////
 
 body {
     margin: 0;
     // background-color: white;
     // background-image: url('../media/img/testBcImg.jpg');
-    height: 100em;
     font-family: 'Open Sans';
     overflow-x: hidden;
 }
@@ -119,6 +123,15 @@ nav {
         color: white;
     }
 
+    .sesionoff{
+        background-color: #ff0c49;
+        border-radius: 5px;
+        margin: 0em 1em;
+        padding: 0.5em 1em;
+        text-decoration: none;
+        color: white;
+      }
+
     .loginBtn:hover {
         background-color: #1b69cf;
     }
@@ -146,8 +159,8 @@ nav {
     width: 55%;
     position: absolute;
     z-index: 50;
-    top: 4em;
-    margin: 4em 3em;
+    top: 20em;
+    margin: 4em 8em;
 }
 
 .infoSlider h1 {
@@ -285,50 +298,50 @@ nav {
 
 .inicioContainer {
     background-color: #f7f7f7;
-    position: relative;
-    display: flex;
-
-    justify-content: center;
-    width: 100vw;
-    height: 150em;
+    
 }
 
-.inicioApartados {
-    padding: 0em 1em;
-    position: relative;
-    width: 95%;
+.centreContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .titulosInicio {
     font-size: 4em;
-    width: 271px;
     background-image: linear-gradient(90deg, #1758ad6b, #ffffff00);
     background-position: bottom;
     background-size: 100% 5%;
     background-repeat: no-repeat;
 }
 
-.centreText {
-    position: absolute;
+.pText {
+    display: flex;
+    font-size: larger;
+    justify-content: center;
     text-align: justify;
     width: 90%;
 }
 
     //------ CONTAINER FORMACIONES ------//
 
-    // .formacionesContainer {
-    // }
+    .formacionesContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
     .formacionCards {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
     
     .formacionCard {
-        width: 48%;
-        height: 33em;
+        width: 25em;
+        height: 32em;
+        cursor: pointer;
         position: relative;
-        transition: 1s;
         background-color: white;
         margin: 0.5em;
         border-radius: 15px;
@@ -339,9 +352,22 @@ nav {
               0 16px 16px rgba(0,0,0,0.12);
     }
 
+    #formacion1 {
+        background-color: #ffdbb6;
+    }
+    #formacion2 {
+        background-color: #d4ffcc;
+    }
+    #formacion3 {
+        background-color: #f99d9d;
+    }
+    #formacion4 {
+        background-color: #ddb0ff;
+    }
+
     .formacionCard h4 {
-        font-size: 2.5em;
-        // margin: 1em 1.3em;
+        font-size: 2em;
+        font-weight: bolder;
         width: 8em;
     }
 
@@ -349,6 +375,7 @@ nav {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+        margin: 0em 1em;
     }
 
     .formacionCardHeader img {
@@ -361,8 +388,7 @@ nav {
     }
 
     .grados {
-        margin-top: 1.5rem;
-        margin-left: 5rem;
+        margin: auto;
         width: 70%;
     }
 
@@ -380,28 +406,123 @@ nav {
         text-shadow: 2px 3px 5px rgba(0,0,0,0.5);
     } 
 
-    
-    // #formacion1 {
-    //     left: -10em;
-    // }
-    // #formacion2 {
-    //     left: 10em;
-    // }
-    // #formacion3 {
-    //     left: -10em;
-    // }
-    // #formacion4 {
-    //     left: 10em;
-    // }
 
+    //------ CONTAINER EQUIPO ------//
 
+    #texto4skills {
+        margin: 3em 0em;
+    }
 
+    .equipoContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;        
+    }
+
+    .cardsGroup {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .card-inner {
+        display: flex;
+        justify-content: center;
+        width: 20em;
+        height: 30em;
+        margin: 1em 1em;
+        border-radius: 20px;
+        background-color: rgb(34, 34, 34);
+        transform-style: preserve-3d;
+        transition: transform 0.6s;
+    }
+
+    .flip-card:hover .card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .card-front, .card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+      
+    .card-front {
+        background-color: #363636;
+        background-image: url('../media/img/blackLogo4SKILLS.png');
+        background-size: cover;
+        background-position: top;
+        color: black;
+        border-radius: 20px;
+    }
+      
+    .card-back {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #363636;
+        color: white;
+        border-radius: 20px;
+        transform: rotateY(180deg);
+    }
+
+    .socialMedia {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .socialMedia a {
+        width: 5em;
+        height: 5em;
+        margin: 0em 2em;
+    }
+
+    .logoScoialMedia {
+        width: 5em;
+        height: 5em;
+    }
+
+    .bitmojiCard {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+    }
+
+    #bitmojiSergio {
+        background-image: url('../media/img/sergioBitmoji.png');
+    }
+    #bitmojiFran {
+        background-image: url('../media/img/frankBitmoji.png');
+    }
+    #bitmojiJohnny {
+        background-image: url('../media/img/johnnyBitmoji.png');
+    }
+    #bitmojiMarc {
+        background-image: url('../media/img/marcBitmoji.png');
+    }
+
+    h6 {
+        color: white;
+        font-size: xx-large;
+        text-align: center;
+        font-family: 'Retro';
+        margin: 1em;
+    }
 
 //////// FOOTER STYLE ////////
 
 footer {
+    width: 100vw;
     height: 10em;
-    background-color: blue;
+    position: relative;
+    background-color: #252526;
     margin-top: 3em;
 }
 
@@ -413,6 +534,16 @@ footer {
 
 .footerContent div img {
     width: 3em;
+}
+
+.linksFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.linksFooter li {
+    list-style: none;
 }
 
 
@@ -434,6 +565,14 @@ footer {
         width: 100%;
         height: 24em;
     }
+
+    .infoSlider {
+        width: 80%;
+        position: absolute;
+        z-index: 50;
+        top: 5em;
+        margin: 4em 3em;
+    }
 }
 
 @media screen and (min-width: 610px) {
@@ -441,6 +580,14 @@ footer {
         margin: 0;
         width: 100%;
         height: 27em;
+    }
+
+    .infoSlider {
+        width: 80%;
+        position: absolute;
+        z-index: 50;
+        top: 7em;
+        margin: 4em 3em;
     }
 }
 
@@ -494,6 +641,18 @@ footer {
         display: flex;
         justify-content: center;
     }
+
+    .infoSlider {
+        width: 80%;
+        position: absolute;
+        z-index: 50;
+        top: 10em;
+        margin: 4em 3em;
+    }
+
+    .formacionCard {
+        width: 30em;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -501,6 +660,26 @@ footer {
         margin: 0;
         width: 100%;
         height: 38em;
+    }
+
+    .infoSlider {
+        width: 80%;
+        position: absolute;
+        z-index: 50;
+        top: 10em;
+        margin: 4em 3em;
+    }
+
+    .infoSlider h1 {
+        font-size: 4.5em;
+    }
+
+    .infoSlider p {
+        font-size: larger;
+    }
+
+    .centreContainer {
+        padding: 0em 5em;
     }
 }
 
@@ -510,6 +689,37 @@ footer {
         width: 100%;
         height: 50em;
     }
+
+    .infoSlider {
+        width: 80%;
+        position: absolute;
+        z-index: 50;
+        top: 20em;
+        margin: 4em 11em;
+    }
+
+    .centreContainer {
+        padding: 0em 8em;
+    }
+
+    .centreText {
+        font-size: large;
+    }
+
+    .formacionCard {
+        width: 21em;
+    }
+
+    #texto4skills {
+        width: 70%;
+    }
+
+}
+@media screen and (min-width: 1690px) {
+    .formacionCard {
+        width: 25em;
+    }
+
 }
 
 @media screen and (min-width: 2560px) {
@@ -517,6 +727,18 @@ footer {
         margin: 0;
         width: 100%;
         height: 82em;
+    }
+
+    .infoSlider {
+        width: 80%;
+        position: absolute;
+        z-index: 50;
+        top: 37em;
+        margin: 4em 25em;
+    }
+
+    .formacionCards {
+        padding: 0em 10em;
     }
 }
 

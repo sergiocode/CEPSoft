@@ -6,6 +6,7 @@ body {
 
 h1 {
   color: white;
+  font-family: 'Retro';
   margin: 0;
   font-size: 5em;
   padding: 0em 0.6em;
@@ -30,6 +31,10 @@ hr {
   width: 20vw;
   margin-top: 2em;
   margin-bottom: 2em;
+}
+
+.presentacionJuegos {
+  font-size: larger;
 }
 
 .containerJuegos {
@@ -97,6 +102,7 @@ hr {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: 'Retro';
   width: 50%;
   color: white;
   text-decoration: none;
@@ -113,11 +119,13 @@ hr {
 }
 
 #juego1 {
-  background-color: #350000;
+  background-image: url("../games/game1/media/img/mapaFrase.png");
+  background-size: cover;
 }
 
 #juego2 {
-  background-color: #000042;
+  background-image: url("../games/game2/img/fondo/oficinal_final.png");
+  background-size: cover;
 }
 
 #juego3 {

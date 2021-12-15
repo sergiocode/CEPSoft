@@ -1,0 +1,41 @@
+{
+    "navbar": {
+        "home" : "Home",
+        "games" : "Games",
+        "contact" : "Contact",
+        "admin" : "ADMIN",
+        "login" : "Log in"
+    },
+    "landing" : {
+        "title" : "Centre d’Estudis Politècnics",
+        "pSlider" : "Specialists in vocational education and active methodologies. Discover a new way of learning",
+        "titleHome" : "The Center",
+        "texto1" : "At Politècnics we have a professional and human team that ensures at all times to satisfy the academic experience of our students. As it is a face-to-face training, we suggest that you live a learning experience with all five senses. In class we can see each other, listen to each other, share, discuss and get excited. Attending class allows us to take better advantage of the learning experience, in a much more enriching way. We have everyone, to explain, to ask, to doubt, to make mistakes and to learn from.",
+        "texto2" : "For the management of the center, the quality of our teaching and administrative team has always been one of the main elements of differential value. For this reason, the Politècnics has a specialized professional and human team, with professional experience in various sectors of the training cycles that are taught. A team that knows and combines the realities of the classroom and the company is essential to be able to accompany our students in their learning process, personal growth and insertion in the labor market.",
+        "titleFormacion" : "Apprenticeship",
+        "h4Informatica" : "IT and Communications",
+        "grado1Informatica" : "Medium vocational education in Microcomputer systems and networks",
+        "grado2Informatica" : "Superior vocational education in web applications development",
+        "grado3Informatica" : "Superior vocational education in multiplatform applications development",
+        "h4Administracio" : "Management and Administration",
+        "grado1Administracio" : "Medium vocational education in administrative gestures",
+        "grado2Administracio" : "Superior vocational education in administration and finances",
+        "grado3Administracio" : "Superior vocational education in assistance to the direction",
+        "h4Comercio" : "Trade and Marketing",
+        "grado1Comercio" : "Medium vocational education in comercial activities",
+        "grado2Comercio" : "Superior vocational education in marketing and advertising",
+        "grado3Comercio" : "Superior vocational education in sells gestures and comercial spaces",
+        "grado4Comercio" : "Superior vocational education in international commerce",
+        "h4Hoteleria" : "Hotel Trading and Tourism",
+        "grado1Hoteleria" : "Superior vocational education in travel agencies and events gestures",
+        "teamTitle" : "The Team",
+        "teamText" : "4Skills is a group of 4 web developers who have collaborated with the Politècnics to work on improving the user experience for the open doors of the center."
+    },
+    "games" : {
+        "title" : "Games",
+        "h1Juegos" : "Games",
+        "pJuegos" : "From Politècnics We want to show the school from an interactive point of view. We offer 4 games that reflect the manner we teach, also modules and professional profile",
+        "h2Login": "Login to play",
+        "aLogin" : "Log In"
+    }
+}

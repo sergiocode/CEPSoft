@@ -1,4 +1,84 @@
 body {
-    background-color: rgb(121, 0, 0);
-    height: 200em;
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+}
+
+* {
+    font-family: "Open Sans";
+}
+
+h2 {
+    font-size: xxx-large;
+}
+
+.infoContacto {
+    position: relative;
+    width: 100vw;
+    height: 40vh;
+    background-image: radial-gradient(ellipse at bottom, #2b3a4b 0%, #070b1b);
+}
+
+.header {
+    position: relative;
+    top: 8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header h1 {
+    font-size: xxx-large;
+    color: white;
+}
+
+.header p {
+    color: white;
+    font-size: large;
+    padding: 0em 2em;
+}
+
+.mapasDirecciones {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 60vh;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 50em;
+}
+
+// #colUrquinaona {
+//     background-color: rgb(187, 187, 255);
+// }
+// #colSantaAnna {
+//     background-color: rgb(255, 197, 197);
+// }
+
+.listaInfo {
+    list-style: none;
+}
+
+.mapa {
+    position: relative;
+    width: 75%;
+}
+
+@media screen and (min-width: 933px) {
+    .header p {
+        color: white;
+        font-size: large;
+        padding: 0em 20em;
+    }
+
+    .col {
+        width: 50%;
+    }
 }

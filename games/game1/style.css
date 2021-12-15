@@ -1,28 +1,30 @@
+@font-face {
+  font-family: 'Retro';
+  src: url(../../fonts/04b_30/04B_30__.ttf);
+}
+
 body {
-  overflow: hidden;
+  overflow-y: hidden;
+  background-color: black;
+  position: fixed;
 }
 
-.juegoContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: relative;
-  top: 12vh;
-  min-height: 30em;
+h2 {
+  font-family: 'Retro';
+  color: white;
+  font-size: xxx-large;
 }
 
-.containerDialogo {
-  background-color: #ffa300;
-  width: 1200px;
-  height: 8em;
-  -ms-flex-item-align: center;
-      align-self: center;
-  border: solid 5px #ffa300;
-  border-radius: 15px 15px 0px 0px;
+button {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+button a {
+  text-decoration: none;
+}
+
+.screen {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -30,17 +32,499 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.menu {
+  background-image: url("./media/img/portadaFrase.png");
+  width: 1200px;
+  height: 650px;
+  position: absolute;
+  z-index: 200;
+}
+
+.btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  top: 65%;
+}
+
+.menuBtns {
+  color: white;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: xx-large;
+  margin: 0em 1em;
+  padding: 0.5em;
+}
+
+#playBtn {
+  background-color: #cf7d02;
+  border: solid 3px #b96115;
+  font-family: "Retro";
+}
+
+#playBtn:hover {
+  background-color: #db9730;
+}
+
+#infoBtn {
+  background-color: #2e334b;
+  border: solid 3px #262629;
+  font-family: "Retro";
+}
+
+#infoBtn:hover {
+  background-color: #213079;
+}
+
+.infoJuego {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: auto;
+  width: 1200px;
+  height: 650px;
+  background-color: #903b0b;
+  position: absolute;
+  z-index: 300;
 }
 
-.containerDialogo div {
-  margin: 0em 2em;
+#closeInfo {
+  background-image: url("./media/img/close.png");
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 50px;
+  left: 1120px;
+}
+
+.infoJuegoContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0em 20em;
+}
+
+.instruccionesP {
+  font-family: 'Open Sans';
+  color: white;
+  font-size: x-large;
+  text-align: justify;
+}
+
+.infoJuegoContent img {
+  width: 170px;
+}
+
+.gameOver {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #5a0000c7;
+  width: 1200px;
+  height: 650px;
+  position: absolute;
+  z-index: 400;
+}
+
+.gameOver h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 5em;
+  margin-top: 2.5em;
+  text-shadow: 2px 2px 2px black;
+}
+
+#reiniciarBtn {
+  width: 270px;
+  background-color: black;
+  border: solid 3px #1b1b1b;
+}
+
+#reiniciarBtn a {
+  color: white;
+  font-family: 'Retro';
+}
+
+#reiniciarBtn:hover {
+  background-color: #290000;
+}
+
+.gameFinished {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 1200px;
+  height: 650px;
+  position: absolute;
+  z-index: 400;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background-color: #4f8b2961;
+}
+
+.gameFinished h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 5em;
+  margin-top: 2.5em;
+  text-shadow: 2px 2px 2px black;
+}
+
+.gameFinished p {
+  text-shadow: 2px 2px 2px black;
+}
+
+#finBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url("./media/img/salir.png");
+  background-size: cover;
+  border: solid 3px #da7a26;
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+}
+
+#finBtn:hover {
+  background-color: #da7a26;
+}
+
+#exitGame {
+  position: absolute;
+  width: 2em;
+  height: 2em;
+}
+
+.juego {
+  margin: 0;
+  top: 0px;
+  background-image: url("./media/img/mapaFrase.png");
+  border: solid 6px #b96115;
+  border-radius: 20px;
+  width: 1200px;
+  height: 650px;
+}
+
+#character {
+  background-image: url("./media/img/alexFront1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 30px;
+  height: 40px;
+  top: 80px;
+  left: 48px;
+  z-index: 100;
+}
+
+.volverJuegos {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #cf7d02;
+  border: solid 3px #b96115;
+  font-family: 'Retro';
+  border-radius: 10px;
+  font-size: xx-large;
+  padding: 0.5em;
+}
+
+.volverJuegos a {
+  color: white;
+  text-decoration: none;
+}
+
+.volverJuegos:hover {
+  background-color: #db9730;
+}
+
+.colision {
+  position: absolute;
+}
+
+#colision1 {
+  width: 127px;
+  height: 260px;
+  top: 80px;
+  left: 35px;
+}
+
+#colision2 {
+  width: 7px;
+  height: 90px;
+  top: 340px;
+  left: 155px;
+}
+
+#colision3 {
+  width: 306px;
+  height: 140px;
+  top: 430px;
+  left: 70px;
+}
+
+#colision4 {
+  width: 3px;
+  height: 215px;
+  top: 215px;
+  left: 376px;
+}
+
+#colision5 {
+  width: 95px;
+  height: 135px;
+  top: 80px;
+  left: 376px;
+}
+
+#colision6 {
+  width: 139px;
+  height: 40px;
+  top: 80px;
+  left: 471px;
+}
+
+#colision7 {
+  width: 95px;
+  height: 135px;
+  top: 80px;
+  left: 610px;
+}
+
+#colision8 {
+  width: 3px;
+  height: 215px;
+  top: 215px;
+  left: 703px;
+}
+
+#colision9 {
+  width: 190px;
+  height: 140px;
+  top: 430px;
+  left: 703px;
+}
+
+#colision10 {
+  width: 166px;
+  height: 48px;
+  top: 522px;
+  left: 893px;
+}
+
+#colision11 {
+  width: 3px;
+  height: 307px;
+  top: 215px;
+  left: 1056px;
+}
+
+#colision12 {
+  width: 310px;
+  height: 135px;
+  top: 80px;
+  left: 858px;
+}
+
+#carretera {
+  width: 1145px;
+  height: 35px;
+  top: 308px;
+  left: 35px;
+}
+
+.gema {
+  position: absolute;
+  width: 40px;
+  height: 40px;
   border-radius: 15px;
 }
 
-.imagenNarrador {
+#gemaF {
+  background-image: url("./media/img/gemaF.gif");
+  background-repeat: round;
+  top: 425px;
+  left: 249px;
+}
+
+#gemaR {
+  background-image: url("./media/img/gemaR.gif");
+  background-repeat: round;
+  top: 185px;
+  left: 439px;
+}
+
+#gemaA {
+  background-image: url("./media/img/gemaA.gif");
+  background-repeat: round;
+  top: 185px;
+  left: 604px;
+}
+
+#gemaS {
+  background-image: url("./media/img/gemaS.gif");
+  background-repeat: round;
+  top: 425px;
+  left: 804px;
+}
+
+#gemaE {
+  background-image: url("./media/img/gemaE.gif");
+  background-repeat: round;
+  top: 125px;
+  left: 904px;
+}
+
+.coche {
+  background-image: url("./media/img/coche.gif");
+  background-size: cover;
+  position: absolute;
+  width: 85px;
+  height: 50px;
+  top: 300px;
+  left: 1100px;
+}
+
+#terminarJuego {
+  position: absolute;
+  background-color: #e0bd89d9;
+  width: 60px;
+  height: 60px;
+  top: 110px;
+  left: 1146px;
+}
+
+.stats {
+  display: none;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #313844;
+  width: 40vw;
+  height: 20em;
+  border-radius: 15px;
+}
+
+.dialogos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 60%;
+}
+
+.iconoDialogo {
+  position: relative;
+  margin: 0em 1.5em;
+  background-color: #dddddd;
+  background-image: url("./media/img/iris.jpeg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 10px;
+  width: 15%;
+  height: 80%;
+}
+
+#textoDialogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: justify;
+  color: white;
+  position: relative;
+  padding: 0em 2em;
+  margin: 0em 1.5em;
+  background-color: #1e242c;
+  border-radius: 10px;
+  width: 80%;
+  height: 80%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.characterStats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 50%;
+}
+
+.iconoAlex {
+  position: relative;
+  margin: 0em 1.5em;
+  background-color: #1e242c;
+  background-image: url("./media/img/alexFront1.png");
+  background-size: cover;
+  border-radius: 10px;
+  width: 15%;
+  height: 80%;
+}
+
+.vidaAlex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -50,102 +534,25 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 16%;
-  height: 90%;
-  background-color: white;
+  color: white;
+  position: relative;
+  padding: 0em 2em;
+  margin: 0em 1.5em;
+  background-color: #1e242c;
+  border-radius: 10px;
+  width: 13%;
+  height: 80%;
 }
 
-.imagenNarrador img {
-  height: 7em;
+.numVida {
+  font-family: "Retro";
+  font-size: xxx-large;
 }
 
-.textoNarrador {
-  width: 90%;
-  height: 90%;
-  background-color: white;
-}
-
-.outputTexto {
-  width: 70%;
-  color: black;
-  font-size: larger;
-}
-
-.juego {
-  position: absolute;
-  top: 8em;
-  border: solid 5px #ffa300;
-  background-image: url("./media/img/mapaFrase.png");
-  width: 1200px;
-  height: 650px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  border-radius: 0px 0px 15px 15px;
-}
-
-#character {
-  background-repeat: no-repeat;
+.heart {
+  background-image: url("./media/img/pixelHeart.png");
   background-size: cover;
-  position: relative;
-  width: 30px;
-  height: 40px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  top: 80px;
-  left: 40px;
-}
-
-.coche {
-  background-image: url("./media/img/coche.gif");
-  width: 50px;
-  height: 20px;
-  position: relative;
-  top: 40%;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.gema {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-}
-
-#gemaF {
-  background-image: url("./media/img/gemaF.gif");
-  background-color: red;
-  top: 425px;
-  left: 240px;
-}
-
-#gemaR {
-  background-image: url("./media/img/gemaR.gif");
-  background-color: yellow;
-}
-
-#gemaA {
-  background-image: url("./media/img/gemaA.gif");
-  background-color: purple;
-}
-
-#gemaS {
-  background-image: url("./media/img/gemaS.gif");
-  background-color: green;
-}
-
-#gemaE {
-  background-image: url("./media/img/gemaE.gif");
-  background-color: aqua;
-}
-
-.collision {
-  margin: 0;
-  width: 1130px;
-  height: 60px;
-  background-color: red;
-  position: absolute;
-  top: 0px;
-  left: 70px;
+  width: 2em;
+  height: 2em;
 }
 /*# sourceMappingURL=style.css.map */

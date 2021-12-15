@@ -1,59 +1,27 @@
+@font-face {
+    font-family: 'Retro';
+    src: url(../../fonts/04b_30/04B_30__.ttf);
+}
+
 body {
-    overflow: hidden;
+    overflow-y: hidden;
+    background-color: black;
+    position: fixed;
 }
 
-//// Estilos de la pantalla y diálogos ////
-
-.juegoContainer {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 12vh;
-    min-height: 30em;
+h2 {
+    font-family: 'Retro';
+    color: white;
+    font-size: xxx-large;
 }
 
-.containerDialogo {
-    background-color: #ffa300;
-    width: 1200px;
-    height: 8em;
-    align-self: center;
-    border: solid 5px #ffa300;
-    border-radius: 15px 15px 0px 0px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+button {
+    transition: 0.3s;
 }
 
-.containerDialogo div {
-    margin: 0em 2em;
-    border-radius: 15px;
+button a {
+    text-decoration: none;
 }
-
-.imagenNarrador {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 16%;
-    height: 90%;
-    background-color: white;
-}
-
-.imagenNarrador img {
-    height: 7em;
-}
-
-.textoNarrador {
-    width: 90%;
-    height: 90%;
-    background-color: white;
-}
-
-.outputTexto {
-    width: 70%;
-    color: black;
-    font-size: larger;
-}
-
 
 //// Estilos del juego ////
 
@@ -64,42 +32,323 @@ $screenHeight: 650px;   //650
     @return $screenWidth + 20;
 }
 
-.juego {
+.screen {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.menu {
+    background-image: url('./media/img/portadaFrase.png');
+    width: 1200px;
+    height: 650px;
     position: absolute;
-    top: 8em;
-    border:solid 5px #ffa300;
-    // background-color: black;
+    z-index: 200;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 65%;
+}
+
+.menuBtns {
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: xx-large;
+    margin: 0em 1em;
+    padding: 0.5em;
+}
+
+#playBtn {
+    background-color: #cf7d02;
+    border: solid 3px #b96115;
+    font-family: "Retro";
+}
+
+#playBtn:hover {
+    background-color: #db9730;
+}
+
+#infoBtn {
+    background-color: #2e334b;
+    border: solid 3px #262629;
+    font-family: "Retro";
+}
+
+#infoBtn:hover {
+    background-color: #213079;
+}
+
+.infoJuego {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 1200px;
+    height: 650px;
+    background-color: #903b0b;
+    position: absolute;
+    z-index: 300;
+}
+
+#closeInfo {
+    background-image: url('./media/img/close.png');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 50px;
+    left: 1120px;
+}
+
+.infoJuegoContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0em 20em;
+}
+
+.instruccionesP {
+    font-family: 'Open Sans';
+    color: white;
+    font-size: x-large;
+    text-align: justify;
+}
+
+.infoJuegoContent img {
+    width: 170px;
+}
+
+// Game Over
+
+.gameOver {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #5a0000c7;
+    width: 1200px;
+    height: 650px;
+    position: absolute;
+    z-index: 400;
+}
+
+.gameOver h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 5em;
+    margin-top: 2.5em;
+    text-shadow: 2px 2px 2px black;
+}
+
+#reiniciarBtn {
+    width: 270px;
+    background-color: black;
+    border: solid 3px rgb(27, 27, 27);
+}
+
+#reiniciarBtn a {
+    color: white;
+    font-family: 'Retro';
+}
+
+#reiniciarBtn:hover {
+    background-color: rgb(41, 0, 0);
+}
+
+// Game finished
+
+.gameFinished {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 1200px;
+    height: 650px;
+    position: absolute;
+    z-index: 400;
+    backdrop-filter: blur(10px);
+    background-color: #4f8b2961;
+}
+
+.gameFinished h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 5em;
+    margin-top: 2.5em;
+    text-shadow: 2px 2px 2px black;
+}
+
+.gameFinished p {
+    text-shadow: 2px 2px 2px black;
+}
+
+#finBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./media/img/salir.png');
+    background-size: cover;
+    border: solid 3px #da7a26;
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+}
+
+#finBtn:hover {
+    background-color: #da7a26;
+}
+
+#exitGame {
+    position: absolute;
+    width: 2em;
+    height: 2em;
+}
+
+.juego {
+    margin: 0;
+    top: 0px;
     background-image: url("./media/img/mapaFrase.png");
+    border: solid 6px #b96115;
+    border-radius: 20px;
     // Dimensiones del mapa
-        width: $screenWidth;
-        height: $screenHeight;
-    align-self: center;
-    border-radius: 0px 0px 15px 15px;
+    width: $screenWidth;
+    height: $screenHeight;
 }
 
 #character {
+    background-image: url('./media/img/alexFront1.png');
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
+    position: absolute;
     width: 30px;
     height: 40px;
     // border: 1px solid;
     // border-color: white;
-    transition: 0.3s;
     top: 80px;
-    left: 40px;
+    left: 48px;
+    z-index: 100;
 }
 
-.coche {
-    background-image: url("./media/img/coche.gif");
-    width: 50px;
-    height: 20px;
-    position: relative;
-    top: 40%;
-    // left: inicioCoche($screenWidth);
-    // background-color: blue;
-    
-    transition: 0.3s;
+.volverJuegos {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #cf7d02;
+    border: solid 3px #b96115;
+    font-family: 'Retro';
+    border-radius: 10px;
+    font-size: xx-large;
+    padding: 0.5em;
+}
+
+.volverJuegos a {
+    color: white;
+    text-decoration: none;
+}
+
+.volverJuegos:hover {
+    background-color: #db9730;
+}
+
+// Colisiones generales del mapa //
+
+.colision {
+    position: absolute;
+    // background-color: rgba(255, 0, 0, 0.301);
+}
+
+#colision1 {
+    width: 127px;
+    height: 260px;
+    top: 80px;
+    left: 35px;
+}
+
+#colision2 {
+    width: 7px;
+    height: 90px;
+    top: 340px;
+    left: 155px;
+}
+
+#colision3 {
+    width: 306px;
+    height: 140px;
+    top: 430px;
+    left: 70px;
+}
+
+#colision4 {
+    width: 3px;
+    height: 215px;
+    top: 215px;
+    left: 376px;
+}
+
+#colision5 {
+    width: 95px;
+    height: 135px;
+    top: 80px;
+    left: 376px;
+}
+
+#colision6 {
+    width: 139px;
+    height: 40px;
+    top: 80px;
+    left: 471px;
+}
+
+#colision7 {
+    width: 95px;
+    height: 135px;
+    top: 80px;
+    left: 610px;
+}
+
+#colision8 {
+    width: 3px;
+    height: 215px;
+    top: 215px;
+    left: 703px;
+}
+
+#colision9 {
+    width: 190px;
+    height: 140px;
+    top: 430px;
+    left: 703px;
+}
+
+#colision10 {
+    width: 166px;
+    height: 48px;
+    top: 522px;
+    left: 893px;
+}
+
+#colision11 {
+    width: 3px;
+    height: 307px;
+    top: 215px;
+    left: 1056px;
+}
+
+#colision12 {
+    width: 310px;
+    height: 135px;
+    top: 80px;
+    left: 858px;
+}
+
+#carretera {
+    width: 1145px;
+    height: 35px;
+    top: 308px;
+    left: 35px;
 }
 
 // Gemas //
@@ -108,38 +357,153 @@ $screenHeight: 650px;   //650
     position: absolute;
     width: 40px;
     height: 40px;
+    border-radius: 15px;
 }
 
 #gemaF {
     background-image: url("./media/img/gemaF.gif");
-    background-color: red;
+    background-repeat: round;
 
     top: 425px;
-    left: 240px;
+    left: 249px;
 }
 #gemaR {
     background-image: url("./media/img/gemaR.gif");
-    background-color: yellow;
+    background-repeat: round;
+
+    top: 185px;
+    left: 439px;
 }
 #gemaA {
     background-image: url("./media/img/gemaA.gif");
-    background-color: purple;
+    background-repeat: round;
+
+    top: 185px;
+    left: 604px;
 }
 #gemaS {
     background-image: url("./media/img/gemaS.gif");
-    background-color: green;
+    background-repeat: round;
+
+    top: 425px;
+    left: 804px;
 }
 #gemaE {
     background-image: url("./media/img/gemaE.gif");
-    background-color: aqua;
+    background-repeat: round;
+    
+    top: 125px;
+    left: 904px;
 }
 
-.collision {
-    margin: 0;
-    width: 1130px;
-    height: 60px;
-    background-color: red;
+.coche {
+    background-image: url("./media/img/coche.gif");
+    background-size: cover;
+    position: absolute;    
+    width: 85px;
+    height: 50px;
+    top: 300px;
+    left: 1100px;
+}
+
+#terminarJuego {
     position: absolute;
-    top: 0px;
-    left: 70px;
+    background-color: #e0bd89d9;
+    width: 60px;
+    height: 60px;
+    top: 110px;
+    left: 1146px;
+}
+
+
+// STATS
+
+.stats {
+    display: none;
+    position: relative;
+    flex-direction: column;
+    background-color: #313844;
+    width: 40vw;
+    height: 20em;
+    border-radius: 15px;
+}
+
+.dialogos {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+}
+
+.iconoDialogo {
+    position: relative;
+    margin: 0em 1.5em;
+    background-color: #dddddd;
+    background-image: url('./media/img/iris.jpeg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    width: 15%;
+    height: 80%;
+}
+
+#textoDialogo {
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    color: white;
+    position: relative;
+    padding: 0em 2em;
+    margin: 0em 1.5em;
+    background-color: #1e242c;
+    border-radius: 10px;
+    width: 80%;
+    height: 80%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.characterStats {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+}
+
+.iconoAlex {
+    position: relative;
+    margin: 0em 1.5em;
+    background-color: #1e242c;
+    background-image: url('./media/img/alexFront1.png');
+    background-size: cover;
+    border-radius: 10px;
+    width: 15%;
+    height: 80%;
+}
+
+.vidaAlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+    padding: 0em 2em;
+    margin: 0em 1.5em;
+    background-color: #1e242c;
+    border-radius: 10px;
+    width: 13%;
+    height: 80%;
+}
+
+.numVida {
+    font-family: "Retro";
+    font-size: xxx-large;
+}
+
+.heart {
+    background-image: url('./media/img/pixelHeart.png');
+    background-size: cover;
+    width: 2em;
+    height: 2em;
 }

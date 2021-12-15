@@ -1,0 +1,385 @@
+/* INSTRUCCIONES DEL JUEGO */
+.mensajeIncial {
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid #333;
+    border-radius: 20px;
+    background-color: #804000;
+    color: #fff;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 750px;
+    height: 50px;
+}
+
+/* DATOS DEL JUEGO */
+.datosJuego {
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: #333;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 100px;
+    padding: 10px;
+}
+
+#contador {
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100px;
+}
+
+#puntuacion {
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100px;
+}
+
+/* TABLERO DEL JUEGO */
+.juego {
+    border: 2px solid #804000;
+    border-radius: 10px;
+    background-image: url(../media/fondo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+    width: 1000px;
+    height: 620px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* ICONOS */
+.imagen1 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    float: left;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.imagen2 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    float: left;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.imagen3 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    float: left;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.imagen4 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    float: left;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.imagen5 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    float: left;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.imagen6 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    float: left;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.imagen7 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    float: left;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.imagen8 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    float: left;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.imagen9 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    float: left;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.imagen10 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    float: left;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+/* CONTENEDOR DONDE SOLTAMOS LOS ICONOS/CAJAS */
+.contenedor {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cajaCorrecta {
+    border: 2px solid #333;
+    border-radius: 50%;
+    background-color: #ABEBC6;
+    font-weight: bold;
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 130px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cajaIncorrecta {
+    border: 2px solid #333;
+    background-color: #F5B7B1;
+    font-weight: bold;
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 130px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* BOTONES */
+.boton {
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 100px;
+}
+
+#jugar {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #804000;
+    color: #fff;
+    font-weight: bold;
+    font-size: large;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+/* MOVIMIENTOS */
+#uno {
+    animation-name: movimiento1;
+    animation-duration: 3s;
+    position: relative;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes movimiento1 {
+    0% {left: 0; top: 0;}
+    25% {left: 130px; top: 0;}
+    50% {left: 130px; top: 170px;}
+    75% {left: 0; top: 170px;}
+    100% {left: 0; top: 0;}
+}
+
+#dos {
+    animation-name: movimiento2;
+    animation-duration: 3s;
+    position: relative;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes movimiento2 {
+    0% {left: 0; top: 0;}
+    25% {left: 0; top: -210px;}
+    50% {left: 160px; top: -210px;}
+    75% {left: 160px; top: 0;}
+    100% {left: 0; top: 0;}
+}
+
+#tres {
+    animation-name: movimiento3;
+    animation-duration: 3s;
+    position: relative;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes movimiento3 {
+    0% {left: 0; top: 0;}
+    25% {left: 0; top: 170px;}
+    50% {left: 200px; top: 170px;}
+    75% {left: 0; top: 170px;}
+    100% {left: 0; top: 0;}
+}
+
+#cuatro {
+    animation-name: movimiento4;
+    animation-duration: 3s;
+    position: relative;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes movimiento4 {
+    0% {left: 0; top: 0;}
+    25% {left: 0; top: -140px;}
+    50% {left: -140px; top: -140px;}
+    75% {left: -140px; top: 0;}
+    100% {left: 0; top: 0;}
+}
+
+#cinco {
+    animation-name: movimiento5;
+    animation-duration: 3s;
+    position: relative;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes movimiento5 {
+    0% {left: 0; top: 0;}
+    25% {left: -230px; top: 0;}
+    50% {left: 0; top: 0;}
+    75% {left: 0; top: -140px;}
+    100% {left: 0; top: 0;}
+}
+
+#seis {
+    animation-name: movimiento6;
+    animation-duration: 3s;
+    position: relative;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes movimiento6 {
+    0% {left: 0; top: 0;}
+    25% {left: 250px; top: 0;}
+    50% {left: 250px; top: 160px;}
+    75% {left: 0; top: 160px;}
+    100% {left: 0; top: 0;}
+}
+
+#siete {
+    animation-name: movimiento7;
+    animation-duration: 3s;
+    position: relative;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes movimiento7 {
+    0% {left: 0; top: 0;}
+    25% {left: 0; top: 210px;}
+    50% {left: 210px; top: 210px;}
+    75% {left: 210px; top: 0;}
+    100% {left: 0; top: 0;}
+}
+
+#ocho {
+    animation-name: movimiento8;
+    animation-duration: 3s;
+    position: relative;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes movimiento8 {
+    0% {left: 0; top: 0;}
+    25% {left: 0; top: -190px;}
+    50% {left: -200px; top: -190px;}
+    75% {left: -200px; top: 0;}
+    100% {left: 0; top: 0;}
+}
+
+#nueve {
+    animation-name: movimiento9;
+    animation-duration: 3s;
+    position: relative;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes movimiento9 {
+    0% {left: 0; top: 0;}
+    25% {left: -180px; top: 0;}
+    50% {left: -180px; top: -150px;}
+    75% {left: 0; top: -150px;}
+    100% {left: 0; top: 0;}
+}
+
+#diez {
+    animation-name: movimiento10;
+    animation-duration: 3s;
+    position: relative;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes movimiento10 {
+    0% {left: 0; top: 0;}
+    25% {left: 0; top: -150px;}
+    50% {left: -250px; top: -150px;}
+    75% {left: 0; top: -150px;}
+    100% {left: 0; top: 0;}
+}

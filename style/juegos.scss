@@ -1,10 +1,3 @@
-// @font-face {
-//     font-family: 'Retro';
-//     src: url('./fonts/04b_30/04B_30__.ttf') format('truetype');
-//     font-style: normal;
-//     font-weight: normal;
-// }
-
 body {
     background-image: radial-gradient(ellipse at bottom, #2b3a4b 0%, #070b1b);
     background-repeat: no-repeat;
@@ -13,6 +6,7 @@ body {
 
 h1 {
     color: white;
+    font-family: 'Retro';
     margin: 0;
     font-size: 5em;
     padding: 0em 0.6em;
@@ -33,6 +27,10 @@ hr {
     width: 20vw;
     margin-top: 2em;
     margin-bottom: 2em;
+}
+
+.presentacionJuegos {
+    font-size: larger;
 }
 
 .containerJuegos {
@@ -77,6 +75,7 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Retro';
     width: 50%;
     color: white;
     text-decoration: none;
@@ -93,10 +92,12 @@ hr {
 }
 
 #juego1 {
-    background-color: rgb(53, 0, 0);
+    background-image: url('../games/game1/media/img/mapaFrase.png');
+    background-size: cover;
 }
 #juego2 {
-    background-color: rgb(0, 0, 66);
+    background-image: url('../games/game2/img/fondo/oficinal_final.png');
+    background-size: cover;
 }
 #juego3 {
     background-color: rgb(0, 73, 0);

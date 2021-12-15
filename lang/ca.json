@@ -1,0 +1,41 @@
+{
+    "navbar": {
+        "home" : "Inici",
+        "games" : "Jocs",
+        "contact" : "Contacte",
+        "admin" : "ADMIN",
+        "login" : "Iniciar Sessió"
+    },
+    "landing" : {
+        "title" : "Centre d’Estudis Politècnics",
+        "pSlider" : "Especialistes en cicles formatius i metodologies actives. Descobreix una nova forma d'aprendre",
+        "titleHome" : "El centre",
+        "texto1" : "Al Centre d’Estudis Politècnics disposem d’un equip professional i humà que vetlla en tot moment per satisfer l’experiència acadèmica del nostre alumnat. En tractar-se d’una formació presencial, li proposem que visqui una experiència d’aprenentatge amb els cinc sentits. A l’aula podem veure’ns, escoltar-nos, compartir, discutir i emocionar-nos. L’assistència a classe ens permet aprofitar millor l’experiència d’aprenentatge, d’una manera molt més enriquidora. Ens tenim a totes i tots per explicar, per preguntar, per dubtar, per equivocar-nos i per descobrir.",
+        "texto2" : "Per a la Direcció del centre, la qualitat del nostre equip docent i administratiu sempre ha estat un dels principals elements de valor diferencial. Per això, el Politècnics té un equip professional i humà especialitzat, amb experiència professional en els diversos sectors dels cicles formatius que s’hi imparteixen. És fonamental un equip que conegui i combini les realitats de l’aula i de l’empresa per poder acompanyar el nostre alumnat en el seu procés d’aprenentatge, de creixement personal i d’inserció en el mercat laboral.",
+        "titleFormacion" : "Formacions",
+        "h4Informatica" : "Informàtica i comunicacions",
+        "grado1Informatica" : "Grau mitjà sistemes microinformàtics i xarxes",
+        "grado2Informatica" : "Grau superior desenvolupament aplicacions web",
+        "grado3Informatica" : "Grau superior desenvolupament aplicacions multiplataforma",
+        "h4Administracio" : "Administració i gestió",
+        "grado1Administracio" : "Grau mitjà gestió administrativa",
+        "grado2Administracio" : "Grau superior administració i finances",
+        "grado3Administracio" : "Grau superior assistència a la direcció",
+        "h4Comercio" : "Comerç y màrqueting",
+        "grado1Comercio" : "Grau mitjà activitats comercials",
+        "grado2Comercio" : "Grau superior màrqueting i publicitat",
+        "grado3Comercio" : "Grau superior gestió de vendes i espais comercials",
+        "grado4Comercio" : "Grau superior comerç internacional",
+        "h4Hoteleria" : "Hoteleria i turisme",
+        "grado1Hoteleria" : "Grau superior agències de viatges i gestió d’esdeveniments",
+        "teamTitle" : "L'equip",
+        "teamText" : "4Skills es un grup de 4 desenvolupadors web que en aquesta ocasió ha col·laborat amb el Centre d'Estudis Politècnics per treballar en millorar l'experiència de l'usuari de cara a les portes obertes del centre."
+    },
+    "games" : {
+        "title" : "Jocs",
+        "h1Juegos" : "Jocs",
+        "pJuegos" : "Desde del Politècnics volem mostrar el centre des d'un punt de vista interactiu. Oferim 4 jocs que reflecteixen la manera que tenim d'ensenyar i sobretot d'aprendre junts, a més dels mòduls i perfils professionals.",
+        "h2Login": "Inicia sessió para jugar",
+        "aLogin" : "Iniciar sessió"
+    }
+}
